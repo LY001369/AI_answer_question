@@ -13,7 +13,7 @@ def test1():
     ]
 
     for ques in QUESTION:
-        print(keyword.get_keys(ques))
+        print(keyword.list_keys(ques))
 
 if __name__ == "__main__":
     test1()

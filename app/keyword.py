@@ -12,7 +12,7 @@ def load_stopwords():
     
     return stopwords
 
-def get_keys(quest):
+def list_keys(quest):
     stopwords = load_stopwords()
 
     # Phân tách từ
@@ -32,4 +32,4 @@ def get_keys(quest):
 
 if __name__ == "__main__":
     text = "Cho em hỏi quy chế tín chỉ là gì?"
-    print(get_keys(text))
+    print(list_keys(text))
