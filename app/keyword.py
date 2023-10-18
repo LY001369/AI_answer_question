@@ -1,10 +1,11 @@
+from .tool import crefilepath
 from pyvi import ViPosTagger, ViTokenizer
 import json, os
 
 # Hàm tải lên stopword 
 def load_stopwords():
     # Đường dẫn đến tệp JSON chứa danh sách stop words
-    file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'rss/stopword_vi.json')
+    file_path = crefilepath('data/rss/stopword_vi.json')
 
     # Mở tệp JSON và nạp dữ liệu
     with open(file_path, 'r', encoding='utf-8') as file:
