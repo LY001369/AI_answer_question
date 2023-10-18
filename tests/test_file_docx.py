@@ -5,11 +5,11 @@ sys.path.append(os.path.dirname(current_dir))
 
 from app import docx, tool
 def test1():
-    file_path = tool.crefilepath("data\doc\CONG_PHAP_QUOC_TE.doc")
+    file_path = tool.cre_file_path("data/doc/Lectures.docx")
     print(file_path)
     paragraphs = docx.list_paragraphs(file_path)
     for para in paragraphs:
-        print('=' * 50)
+        print('-' * 50)
         print(para)
     
 if __name__ == "__main__":
