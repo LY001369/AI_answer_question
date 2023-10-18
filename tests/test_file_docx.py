@@ -4,13 +4,15 @@ sys.path.append(os.path.dirname(current_dir))
 #======================================================================#
 
 from app import docx, tool
-def test1():
-    file_path = tool.cre_file_path("data/doc/Lectures.docx")
-    print(file_path)
+def test1(file_path):
     paragraphs = docx.list_paragraphs(file_path)
     for para in paragraphs:
         print('-' * 50)
         print(para)
     
 if __name__ == "__main__":
-    test1()
+
+    for file in tool.get_files_directory(tool.cre_file_path("data/docx")):
+        print("=" * 50)
+        print(f"file: {file}")
+        test1(file)

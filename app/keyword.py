@@ -34,3 +34,4 @@ def list_keys(quest):
 if __name__ == "__main__":
     text = "Cho em hỏi quy chế tín chỉ là gì?"
     print(list_keys(text))
+    
